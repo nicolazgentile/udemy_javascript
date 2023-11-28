@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <head>
+        <title>Herencia - Clases</title>
+        <script src="scripts/index.js"></script>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="shortcut icon" href="./../../imagenes/barba.png">
+    </head>
+    <body>
+        <h1>Veterinaria: No nos metas el Perro</h1>
+        <div class="servicios">
+            <h3>Registro de Mascotas</h3>
+            <button onclick="nuevoRegistro();">Nuevo Registro</button>
+            <div id="formulario">
+                <div class="itemForm">
+                    <label for="especie">Seleccione una especie</label><br>
+                    <input id="especie" list="especies">
+                    <datalist id="especies">
+                        <option value="">Seleccionar</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="conejo">Conejo</option>
+                    </datalist>
+                </div>
+                <div class="itemForm">
+                    <label for="nombre">Nombre</label><br>
+                    <input id="nombre" type="text">
+                </div>
+                <div class="itemForm">
+                    <label for="peso">Peso</label><br>
+                    <input id="peso" type="number">
+                </div>
+                <div class="itemForm">
+                    <label for="edad">Edad</label><br>
+                    <input id="edad" type="number">
+                </div>
+                <div class="itemForm">
+                    <label for="observacion">Observación</label><br>
+                    <input id="observacion" type="text">
+                </div>
+                <button onclick="registrarMascota();">Guardar</button>
+            </div>
+        </div>
+        <div class="servicios">
+            <h3>Listado de Mascotas</h3>
+            <button onclick="listarMascotas();">Mostrar Listado</button>
+            <ul id="listadoMascotas"></ul>
+        </div>
+    </body>
+</html>

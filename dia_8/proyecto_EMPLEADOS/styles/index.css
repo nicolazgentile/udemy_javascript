@@ -1,0 +1,22 @@
+.titulo {
+    color: darkred;
+    font-size: large;
+    margin: 5%;
+}
+.formulario {
+    margin: 5%;
+    width: fit-content;
+}
+.texto{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.texto input{
+    width: 150px;
+}
+.botones input{
+    background-color: blue;
+    color: red;
+    width: 150px;
+    margin-left: 5%;
+}

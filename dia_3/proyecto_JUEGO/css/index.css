@@ -1,0 +1,66 @@
+body {
+    background-image: url("./../img/minecraft.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.siempre-visibles{
+    float: right;
+}
+.reloj {
+    background-color: azure;
+    font-size: large;
+    color: black;
+    padding: 10px;
+    border-color: aqua;
+    border-style: groove;
+    border-width: 1cqmax;
+    float: right;
+}
+#resetTest {
+    color: white;
+    background-color: rgb(180, 59, 59);
+    width: auto;
+    padding: 20px;
+}
+#capa1 {
+    font-size: large;
+    color: rgb(229, 255, 0);
+    text-align: center;
+}
+#capa1 p {
+    color: yellow;
+    font-weight: 700;
+    text-align: center;
+}
+#comenzarTest {
+    color: white;
+    background-color: rgb(180, 59, 59);
+    width: 10%;
+    padding: 20px;
+}
+#capa2 {
+    color: red;
+    text-align: right;
+    margin-left: 50px;
+    width: 70%;
+}
+#cronometro {
+    float: right;
+    font-size: 10cqmax;
+    color: red;
+    text-align: left;
+    margin-left: 50px;
+}
+#capa2 > .preguntas {
+    margin: 50px;
+    color:white;
+}
+#capa2 div {
+    color: yellow;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 100px;
+}
+#capa2 button {
+    margin-left: 10px;
+}

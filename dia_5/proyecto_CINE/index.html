@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <title>ss</title>
+        <script src="scripts/index.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>Bienvenido a nuestra página</h1>
+        <h2>Cartelera y Venta de Entradas</h2>
+        <br><br><br>
+        <div id="cartelera">
+            <h3>Cartelera</h3>
+            <label for="genero">Seleccione un Género<br></label>
+            <select id="genero">
+                <option value="0">Todos</option>
+                <option>Infantil</option>
+                <option>Comedia</option>
+                <option>Aventura</option>
+                <option>Accion</option>
+                <option>Terror</option>
+                <option>Drama</option>
+                <option>Ciencia Ficción</option>
+            </select>
+            <p>Edad del integrante mas pequeño<br>
+            <input type="text" id="edad"></p>
+            <button id="mostrarListado" onclick="mostrarListado();">Mostrar Cartelera</button>
+            <h4>Películas Disponibles según filtros:</h4>
+            <ul id="listado_peliculas">
+                <li class="pelis Accion M18">Hablemos de Ucrania en un asado</li>
+                <li class="pelis Accion INF">Hablemos de política en un asado</li>
+                <li class="pelis Accion ATP">Hablemos de...en un asado</li>
+                <li class="pelis Drama M18">Se acabaron las milanesas</li>
+                <li class="pelis Drama INF">..alguien me alcanza el papel higiénico....hola?</li>
+                <li class="pelis Terror ATP">Nicolas Cage sacó una nueva peli...</li>
+                <li class="pelis Comedia INF">Los políticos son bien patriotas</li>
+                <li class="pelis Comedia ATP">El pela va a hacer la tarea de buena gana</li>
+            </ul>
+        </div>
+        <sound id="entrada">
+            <source src="sounds/ringtones-of-caribbean.mp3" type="audio/mpeg">
+        </sound>
+    </body>
+</html>

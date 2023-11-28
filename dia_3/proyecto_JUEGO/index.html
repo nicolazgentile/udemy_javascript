@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <head>
+        <title>JUEGO</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div class="siempre-visibles">
+            <p class="reloj" id="reloj">00:00:00</p>
+            <p><button id="resetTest" onclick="window.location.reload();">Otra Oportunidad</button></p>
+        </div>
+        <div id="capa1">
+            <h1>Bienvenido al test de cerebrotes!</h1>
+            <p><label for="comenzarTest">Aprieta comenzar test...o que, eres niñita?</label></p>
+            <p><button id="comenzarTest" onclick="capa1a2()">Iniciar Test</button></p>
+        </div>
+        <div id="capa2" style="display:none">
+            <p class="cronometro" id="cronometro">00</p>
+            <div class="preguntas" id="pregunta1">
+                <h2>Pregunta 1</h2>
+                <div>
+                    <p>Cuanto es uno + uno?</p>
+                    <input placeholder="Ingrese aqui su respuesta" id="respuesta1"><button onclick="checkIt('respuesta1')">Check it!</button></p>
+                </div>
+            </div>
+            <div class="preguntas" id="pregunta2">
+                <h2>Pregunta 2</h2>
+                <div>
+                    <p>De que color es el caballo blanco de San Martin?</p>
+                    <input placeholder="Ingrese aqui su respuesta" id="respuesta2"><button onclick="checkIt('respuesta2')">Check it!</button></p>
+                </div>
+            </div>
+            <div class="preguntas" id="pregunta3">
+                <h2>Pregunta 3</h2>
+                <div>
+                    <p>Cuanto es: (((3 + 5x5)/8) x 0 x ((45 + 5)/5) *42 ) + 1 ?</p>
+                    <input placeholder="Ingrese aqui su respuesta" id="respuesta3"><button onclick="checkIt('respuesta3')">Check it!</button></p>
+                </div>
+            </div>
+        </div>
+        <audio id="audio_respuesta_incorrecta">
+            <source src="sounds/incorrecto.mp3" type="audio/mpeg">
+            No se pudo reproducir el sonido
+        </audio>
+        <audio id="audio_respuesta_correcta">
+            <source src="sounds/correcto.mp3" type="audio/mpeg">
+            No se pudo reproducir el sonido
+        </audio>
+    </body>
+    <script>
+        let elementoCapa1 = document.getElementById('capa1');
+        let elementoCapa2 = document.getElementById('capa2');
+        let elementoReloj = document.getElementById("reloj");
+        let elementoCronometro = document.getElementById("cronometro");
+        let elementosInput = document.getElementsByTagName("input");
+        let elementoSoundWrong = document.getElementById('audio_respuesta_incorrecta');
+        let elementoSoundRight = document.getElementById('audio_respuesta_correcta');
+        let hora;
+        let contador =new Date();
+        let tiempoLimite = 20000;
+        let flagTimer = 0;
+        options = {hour: "numeric", minute: "numeric", second: "numeric",
+                    hour12: false, timeZone: "America/Argentina/Buenos_Aires", };
+
+        function capa1a2() {
+            elementoCapa1.style.display = "none";
+            elementoCapa2.style.display = "block";
+            iniciarCronometro();
+        }
+        document.addEventListener("DOMContentLoaded", function(){
+            iniciarReloj();
+        });
+
+        function iniciarReloj(){
+            setInterval(actualizarReloj, 1000);
+        }
+        function actualizarReloj(){
+            hora = new Date();
+            let tiempoTranscurrido = hora-contador;
+            let tiempoRestante = parseInt((tiempoLimite - tiempoTranscurrido)/1000);
+            mostrarHora = new Intl.DateTimeFormat("en-US", options).format(hora);
+            elementoReloj.textContent = mostrarHora;
+            elementoCronometro.textContent = tiempoRestante;
+            if(tiempoRestante <= 0 & flagTimer){
+                mostrarAlerta('Tiempo cumplido....looooooooser!!!');
+                flagTimer = 0;
+                desabilitarRespuestas();
+            }
+        }
+        function iniciarCronometro(){
+            contador = new Date();
+            flagTimer = 1;
+        }
+        function checkIt(answer){
+            let veredicto = false;
+            respuesta = document.getElementById(answer).value;
+            if(answer == 'respuesta1' & respuesta == 'dos') veredicto = true;
+            if(answer == 'respuesta2' & respuesta == 'blanco') veredicto = true;
+            if(answer == 'respuesta3' & respuesta == '0') veredicto = true;
+            resultadoVeredicto(veredicto);
+        }
+        function resultadoVeredicto(veredicto){
+            if(veredicto){
+                flagTimer = 0;
+                elementoSoundRight.play();
+                setTimeout(function(){mostrarAlerta('CORRECTOOOO!!!!')}, 1500);
+            }
+            else{
+                elementoSoundWrong.play();
+                setTimeout(function(){mostrarAlerta('Segui participando....')}, 500);
+            }
+        }
+        function mostrarAlerta(mensaje){
+            alert(mensaje);
+        }
+        function desabilitarRespuestas(){
+            for(let elementoInput of elementosInput){
+                    elementoInput.setAttribute("readOnly", "true");
+                    elementoCronometro.style.display = "none";
+                }
+        }
+    </script>
+</html>

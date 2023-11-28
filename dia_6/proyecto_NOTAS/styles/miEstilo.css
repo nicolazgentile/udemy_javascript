@@ -1,0 +1,10 @@
+body {
+    background-color: aqua;
+}
+
+div {
+    position: relative;
+    margin: 5%;
+    background-image: url("../imgs/jake_el_perro.jpg");
+    background-repeat: no-repeat;
+}

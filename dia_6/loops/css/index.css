@@ -1,0 +1,11 @@
+body{
+    padding-left: 15%;
+}
+#botonMostrarTabla {
+    display: none;
+}
+.box1 {
+    width: 50%;
+    border-style: groove;
+    border-color: aqua;
+}

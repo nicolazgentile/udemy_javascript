@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title>Personal</title>
+        <script src="scripts/index.js"></script>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="shortcut icon" href="./../../imagenes/batman.png">
+    </head>
+    <body>
+        <div class="titulo">Registro de Empleados</div>
+        <div class="formulario">
+            <label for="nombre">nombre</label>
+            <div class="texto">
+                <input id="nombre" type="text">
+            </div>
+            <label for="apellido">apellido</label>
+            <div class="texto">
+                <input id="apellido" type="text">
+            </div>
+            <label for="nacimiento">nacimiento</label>
+            <div class="texto">
+                <input id="nacimiento" type="date">
+            </div>
+            <label for="cargo">cargo</label>
+            <div class="texto">
+                <input id="cargo" type="text">
+            </div>
+        </div>
+        <div class="botones">
+            <p><input type="button" onclick="registrar_empleado();" value="Registrar"></p>
+            <p><input type="button" onclick="listar_empleados();" value="Listar"></p>
+        </div>
+    </body>
+</html>

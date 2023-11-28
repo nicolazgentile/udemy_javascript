@@ -1,0 +1,34 @@
+body {
+    background-image: url("./../img/cinta.png");
+    padding-left: 10%;
+    padding-top: 3%;
+    color:blue;
+}
+
+h1 {
+    color: red;
+}
+
+#mostrarListado {
+    font-size: larger;
+}
+
+#cartelera {
+    background-color: lightgray;
+    width: fit-content;
+    border-style: groove;
+    border-color: aquamarine;
+    padding: 0px 20px 20px 20px;
+}
+
+select, input {
+    width: 50%;
+}
+
+button {
+    width: 98%;
+}
+
+.pelis {
+    display: none;
+}

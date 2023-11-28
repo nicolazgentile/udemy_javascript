@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <header>
+        <title>Proyecto</title>
+        <link rel="stylesheet" href="base.css">
+    </header>
+    <body>
+        <div>
+            </a>
+            <p><h1>Biografía</h1></p>
+            <a href="https://www.google.com" target="_blank">
+                <img src="Screenshot_12-19-01.png"></a>
+                    <!-- alt="Smiley face" width="30%" height="40%" align="left"
+                    style="border:5px solid rgb(73, 226, 26)" hspace="20"></a> -->
+            <ul>
+                <!-- window.close() mehtod may not close windows opened by html (security issues)-->
+                <!-- To ensure the target url can be closed, it must be opened by script (security issues) -->
+                <li><h3><a href='' onclick="openWindow('familia/familia.html');" id="mifamilia">Familia</a></h3></li>
+                <li><h3><p class="tezto"><a href='laboral/laboral.html' target='_blank'>Laboral</a></h3></li>
+                <li><a href="https://www.sokaglobal.org/es/resources/study-materials/buddhist-
+                        concepts/life-and-death.html">El más allá...</a></li>
+            </ul>
+        </div>
+    </body>
+
+<script>
+function openWindow(url) {
+    // Open a new window
+    var newWindow = window.open(url, '_blank');
+}
+</script>
+    
+</html>

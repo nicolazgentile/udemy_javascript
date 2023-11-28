@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <head>
+        <title>Inputs</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div>
+            <p>Ingresa tu nombre:</p>
+            <input type="text" id="ingreso">
+            <button onclick="saludarUsuario()">Saludar</button>
+            <p>La hora actual es: <span id="relosss">00:00:00</span></p>
+        </div>
+        <div>
+            <label for="cronometro">Tiempo [seg]</label><br>
+            <input type="text" id="cronometro">
+            <button onclick="comenzarCronometro()">Iniciar</button>
+        </div>
+        <a href="https://es.wikipedia.org/wiki/Jake_el_perro"
+         target="_blank"><img src="img/jake_el_perro.jpg"></a>
+         <audio id="audio_alarma">
+            <source src="sounds/alarma_auto.mp3" type="audio/mpeg">
+            No se pudo reproducir el sonido
+         </audio>
+         <audio controls>
+            <source src="sounds/aves_16.mp3" type="audio/mpeg">
+            No se pudo reproducir el sonido
+         </audio>
+
+    </body>
+
+    <script>
+        let miVariable4;
+        let tiempoCronometro;
+        let audio_alarma = document.getElementById("audio_alarma");
+        let horaSaludo;
+        let horaActual;
+        let elementoRelos = document.getElementById("relosss");
+
+        function saludarUsuario(){
+            miVariable4 = document.getElementById("ingreso").value;
+            horaSaludo = new Date;
+            alert("Hola " + miVariable4);
+        }
+        function comenzarCronometro(){
+            tiempoCronometro = document.getElementById("cronometro").value;
+            setTimeout(activarAlarma, tiempoCronometro * 1000);
+        }
+        function activarAlarma(){
+            audio_alarma.play();
+            alert(miVariable4 + ", gracias por esperar " + tiempoCronometro +
+             " seg!!!" + "\nTe saludé a las las: " + horaSaludo.getHours() + ":"
+              + horaSaludo.getMinutes() + ":" + horaSaludo.getSeconds() + " hs");
+        }
+        function activarReloj() {
+            setInterval(actualizarHora, 1000);
+        }
+        function actualizarHora() {
+            horaActual = new Date();
+            elementoRelos.textContent = horaActual.getHours()+ ":"
+             + horaActual.getMinutes() + ":" + horaActual.getSeconds();
+        }
+        document.addEventListener("DOMContentLoaded", function(){
+            activarReloj();
+        });
+    </script>
+</html>

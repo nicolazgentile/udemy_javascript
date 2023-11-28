@@ -1,0 +1,12 @@
+{
+    "nombre": "Nico",
+    "edad": 44,
+    "esEstudiante": false,
+    "direccion": {
+        "calle": 46,
+        "ciudad": "General Pico"
+    },
+    "telefono": [
+        5492302591658, 569481898
+    ]
+}

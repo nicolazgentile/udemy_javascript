@@ -1,0 +1,30 @@
+#calculadora {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 15%;
+    background-color: lightseagreen;
+    border-style: groove;
+    border-color: blueviolet;
+}
+
+input {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+#resultado {
+    background-color: lightgray;
+}
+
+#operadores, #numeros {
+    display: inline-block;
+    vertical-align: center;
+}
+
+table {
+    margin: auto;
+    background-color: aqua;
+    width: auto;
+}

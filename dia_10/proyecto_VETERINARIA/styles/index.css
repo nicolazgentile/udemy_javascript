@@ -1,0 +1,34 @@
+body {
+    background-color: blueviolet;
+}
+h1 {
+    text-align: center;
+    color: yellowgreen;
+}
+#formulario {
+    margin-left: 5%;
+    display: none;
+}
+.itemForm {
+    margin: 3%;
+}
+.servicios {
+    color: yellow;
+    margin: 5%;
+    width: 50%;
+}
+.servicios button {
+    background-color: chartreuse;
+}
+.servicios ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina los espacios internos */
+}
+.servicios li {
+    background-color: #f1f1f1; /* Color de fondo */
+    padding: 10px; /* Espacio interno */
+    border-bottom: 1px solid #ccc; /* Borde inferior */
+    text-align: center; /* Alineación del texto */
+    background-color: teal;
+}
