@@ -1,0 +1,33 @@
+body {
+    background-color: blue;
+    margin-left: 20%;
+}
+#titulo {
+    margin-top: 5%;
+    font-size: 400%;
+    color:tomato;
+    text-shadow: yellow;
+}
+#seleccion {
+    margin-top: auto;
+    color: white;
+}
+#selector {
+    background-color: yellowgreen;
+}
+#buscador {
+    margin-top: 2%;
+    color: white;
+}
+#textoBusqueda{
+    width:fit-content;
+}
+#buscar{
+    color: white;
+    background-color: black;
+}
+#listado {
+    width:fit-content;
+    height:fit-content;
+    background-color: blueviolet;
+}

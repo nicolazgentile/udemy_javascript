@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <title>Buscador Pelis</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="shortcut icon" href="./../../imagenes/js.png">
+    </head>
+    <body>
+        <div id="titulo">Pelis cuaK!</div>
+        <div id="seleccion">
+            <label for="selector">Seleccione una Opción: </label>
+            <select id="selector">
+                <option value="series">Series</option>
+                <option value="peliculas">Peliculas</option>
+            </select>
+        </div>
+        <div id="buscador">
+            <input id="textoBusqueda" type="text" placeholder="Ingrese parte del nombre del titulo">
+            <button id="buscar">Buscar</button>
+        </div>
+        <ul id="listado"></ul>
+    </body>
+    <footer>
+        <script src="scripts/index.js"></script>
+    </footer>
+</html>
